@@ -1,0 +1,12 @@
+
+[ClassVersion("1.0.0.0"), FriendlyName("xInstallGit")]
+class PCM_xInstallGit : OMI_BaseResource
+{
+    [Key, Description("Version of Git to install or uninstall.")] String Version;
+    [Write, Description("Path to the installer")] String InstallerPath;
+    [Write, Description("Architecture of Git Installer (x86 or x64 version)")] String InstallerArchitecture;
+    [Write, Description("Specifies if the share should be added or removed"), ValueMap{"Present","AnyVersionPresent","Absent"}, Values{"Present","AnyVersionPresent","Absent"}] String Ensure;
+};
+
+
+
