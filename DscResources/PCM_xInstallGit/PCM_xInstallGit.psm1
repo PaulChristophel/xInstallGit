@@ -9,7 +9,7 @@ function Get-TargetResource
         $Version,
                 
         [ValidateScript({Test-Path $_ -PathType 'Leaf'})]
-        [System.String[]]
+        [System.String]
         $InstallerPath,
         
         [parameter(Mandatory = $true)]
@@ -108,7 +108,7 @@ function Set-TargetResource
         $InstallerArchitecture,
         
         [ValidateScript({Test-Path $_ -PathType 'Leaf'})]
-        [System.String[]]
+        [System.String]
         $InstallerPath,
 
         [parameter(Mandatory = $true)]
@@ -175,7 +175,7 @@ function Test-TargetResource
         $InstallerArchitecture,
         
         [ValidateScript({Test-Path $_ -PathType 'Leaf'})]
-        [System.String[]]
+        [System.String]
         $InstallerPath,
 
         [ValidateSet("Present","AnyVersionPresent","Absent")]
